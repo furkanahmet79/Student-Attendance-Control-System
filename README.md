@@ -195,7 +195,4 @@ m_serialPort->setBaudRate(QSerialPort::Baud115200);
 - Debug modunu aktifleştirerek hata detaylarını görebilirsiniz
 - Kart okuyucu bağlantı problemi veya veritabanı işlem hatası olabilir
 
----
-
-⭐ **Bu projeyi beğendiniz mi? Star vermeyi unutmayın!**
 
