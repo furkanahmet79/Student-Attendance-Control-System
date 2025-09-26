@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>LoginWidget</class>
+ <widget class="QWidget" name="LoginWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Giriş</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:1,
+                               stop:0 #f5f7fa, stop:1 #c3cfe2);
+}</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="loginGroupBox">
+     <property name="styleSheet">
+      <string notr="true">QGroupBox {
+    background: rgba(255, 255, 255, 0.95);
+    border: 3px solid #27ae60;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding-top: 10px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    left: 10px;
+    padding: 0 8px 0 8px;
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                               stop:0 #27ae60, stop:1 #229954);
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+}</string>
+     </property>
+     <property name="title">
+      <string>Kullanıcı Girişi</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_userType">
+        <item>
+         <widget class="QLabel" name="userTypeLabel">
+          <property name="text">
+           <string>Kullanıcı Tipi:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="userTypeComboBox">
+          <item>
+           <property name="text">
+            <string>Admin</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Öğretmen</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Öğrenci</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QLabel" name="usernameLabel">
+          <property name="minimumSize">
+           <size>
+            <width>120</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Kullanıcı Adı:</string>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QLabel {
+    color: #2c3e50;
+    font-weight: 500;
+    font-size: 10pt;
+}</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="usernameEdit">
+          <property name="styleSheet">
+           <string notr="true">QLineEdit {
+    background: white;
+    border: 2px solid #bdc3c7;
+    border-radius: 6px;
+    padding: 8px;
+    font-size: 10pt;
+    selection-background-color: #3498db;
+}
+
+QLineEdit:focus {
+    border: 2px solid #3498db;
+    background: #f8f9fa;
+}</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QLabel" name="passwordLabel">
+          <property name="minimumSize">
+           <size>
+            <width>120</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Şifre:</string>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QLabel {
+    color: #2c3e50;
+    font-weight: 500;
+    font-size: 10pt;
+}</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="passwordEdit">
+          <property name="echoMode">
+           <enum>QLineEdit::Password</enum>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QLineEdit {
+    background: white;
+    border: 2px solid #bdc3c7;
+    border-radius: 6px;
+    padding: 8px;
+    font-size: 10pt;
+    selection-background-color: #3498db;
+    font-family: 'Courier New', monospace;
+}
+
+QLineEdit:focus {
+    border: 2px solid #3498db;
+    background: #f8f9fa;
+}</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_3">
+        <item>
+         <widget class="QPushButton" name="loginButton">
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                               stop:0 #27ae60, stop:1 #229954);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    padding: 12px 24px;
+    font-weight: bold;
+    font-size: 12pt;
+    min-height: 20px;
+}
+
+QPushButton:hover {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                               stop:0 #2ecc71, stop:1 #27ae60);
+}</string>
+          </property>
+          <property name="text">
+           <string>Giriş Yap</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="changePasswordButton">
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                               stop:0 #95a5a6, stop:1 #7f8c8d);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    padding: 8px 16px;
+    font-weight: bold;
+    font-size: 10pt;
+    min-height: 20px;
+}
+
+QPushButton:hover {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                               stop:0 #bdc3c7, stop:1 #95a5a6);
+}</string>
+          </property>
+          <property name="text">
+           <string>Şifre Değiştir</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <spacer name="verticalSpacer_2">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui> 

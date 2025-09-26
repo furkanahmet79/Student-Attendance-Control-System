@@ -1,0 +1,365 @@
+/* ========================================
+   YOKLAMA SİSTEMİ - MODERN TASARIM
+   ======================================== */
+
+/* Ana Pencere Stili */
+QMainWindow {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:1,
+                               stop:0 #f5f7fa, stop:1 #c3cfe2);
+    color: #2c3e50;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 10pt;
+}
+
+/* Grup Kutuları */
+QGroupBox {
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid #3498db;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding-top: 10px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    left: 10px;
+    padding: 0 8px 0 8px;
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                               stop:0 #3498db, stop:1 #2980b9);
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Butonlar */
+QPushButton {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                               stop:0 #3498db, stop:1 #2980b9);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    padding: 8px 16px;
+    font-weight: bold;
+    font-size: 10pt;
+    min-height: 20px;
+    min-width: 120px;
+}
+
+QPushButton:hover {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                               stop:0 #5dade2, stop:1 #3498db);
+    transform: translateY(-1px);
+}
+
+QPushButton:pressed {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                               stop:0 #2980b9, stop:1 #21618c);
+}
+
+QPushButton:disabled {
+    background: #bdc3c7;
+    color: #7f8c8d;
+}
+
+/* Özel Butonlar */
+QPushButton#loginButton {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                               stop:0 #27ae60, stop:1 #229954);
+    font-size: 12pt;
+    padding: 12px 24px;
+}
+
+QPushButton#loginButton:hover {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                               stop:0 #2ecc71, stop:1 #27ae60);
+}
+
+QPushButton#logoutButton {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                               stop:0 #e74c3c, stop:1 #c0392b);
+}
+
+QPushButton#logoutButton:hover {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                               stop:0 #ec7063, stop:1 #e74c3c);
+}
+
+QPushButton#startAttendanceButton {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                               stop:0 #f39c12, stop:1 #e67e22);
+}
+
+QPushButton#startAttendanceButton:hover {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                               stop:0 #f1c40f, stop:1 #f39c12);
+}
+
+QPushButton#endAttendanceButton {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                               stop:0 #9b59b6, stop:1 #8e44ad);
+}
+
+QPushButton#endAttendanceButton:hover {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                               stop:0 #bb8fce, stop:1 #9b59b6);
+}
+
+/* Metin Kutuları */
+QLineEdit {
+    background: white;
+    border: 2px solid #bdc3c7;
+    border-radius: 6px;
+    padding: 8px;
+    font-size: 10pt;
+    selection-background-color: #3498db;
+}
+
+QLineEdit:focus {
+    border: 2px solid #3498db;
+    background: #f8f9fa;
+}
+
+QLineEdit:disabled {
+    background: #ecf0f1;
+    color: #7f8c8d;
+}
+
+/* Şifre Kutuları */
+QLineEdit[echoMode="2"] {
+    font-family: 'Courier New', monospace;
+}
+
+/* Combo Box */
+QComboBox {
+    background: white;
+    border: 2px solid #bdc3c7;
+    border-radius: 6px;
+    padding: 8px;
+    font-size: 10pt;
+    min-height: 20px;
+}
+
+QComboBox:hover {
+    border: 2px solid #3498db;
+}
+
+QComboBox:focus {
+    border: 2px solid #3498db;
+    background: #f8f9fa;
+}
+
+QComboBox::drop-down {
+    border: none;
+    width: 20px;
+}
+
+QComboBox::down-arrow {
+    image: none;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #7f8c8d;
+    margin-right: 5px;
+}
+
+QComboBox::down-arrow:hover {
+    border-top-color: #3498db;
+}
+
+/* Tablo Widget'ları */
+QTableWidget {
+    background: white;
+    alternate-background-color: #f8f9fa;
+    border: 2px solid #bdc3c7;
+    border-radius: 8px;
+    gridline-color: #ecf0f1;
+    selection-background-color: #3498db;
+    selection-color: white;
+    font-size: 9pt;
+}
+
+QTableWidget::item {
+    padding: 8px;
+    border-bottom: 1px solid #ecf0f1;
+}
+
+QTableWidget::item:selected {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                               stop:0 #3498db, stop:1 #2980b9);
+    color: white;
+}
+
+QTableWidget::item:hover {
+    background: #e8f4fd;
+}
+
+QHeaderView::section {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                               stop:0 #34495e, stop:1 #2c3e50);
+    color: white;
+    padding: 10px;
+    border: none;
+    font-weight: bold;
+    font-size: 9pt;
+}
+
+QHeaderView::section:hover {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                               stop:0 #5dade2, stop:1 #3498db);
+}
+
+/* Tab Widget */
+QTabWidget::pane {
+    border: 2px solid #bdc3c7;
+    border-radius: 8px;
+    background: white;
+}
+
+QTabBar::tab {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                               stop:0 #ecf0f1, stop:1 #bdc3c7);
+    border: 1px solid #bdc3c7;
+    border-bottom: none;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    padding: 12px 50px;
+    margin-right: 2px;
+    font-weight: bold;
+    color: #2c3e50;
+    min-width: 180px;
+}
+
+QTabBar::tab:selected {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                               stop:0 #3498db, stop:1 #2980b9);
+    color: white;
+}
+
+QTabBar::tab:hover:!selected {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                               stop:0 #5dade2, stop:1 #3498db);
+    color: white;
+}
+
+/* Scroll Bar */
+QScrollBar:vertical {
+    background: #ecf0f1;
+    width: 12px;
+    border-radius: 6px;
+}
+
+QScrollBar::handle:vertical {
+    background: #bdc3c7;
+    border-radius: 6px;
+    min-height: 20px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background: #95a5a6;
+}
+
+QScrollBar::add-line:vertical,
+QScrollBar::sub-line:vertical {
+    height: 0px;
+}
+
+QScrollBar:horizontal {
+    background: #ecf0f1;
+    height: 12px;
+    border-radius: 6px;
+}
+
+QScrollBar::handle:horizontal {
+    background: #bdc3c7;
+    border-radius: 6px;
+    min-width: 20px;
+}
+
+QScrollBar::handle:horizontal:hover {
+    background: #95a5a6;
+}
+
+QScrollBar::add-line:horizontal,
+QScrollBar::sub-line:horizontal {
+    width: 0px;
+}
+
+/* Status Bar */
+QStatusBar {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                               stop:0 #34495e, stop:1 #2c3e50);
+    color: white;
+    font-weight: bold;
+    padding: 5px;
+}
+
+/* Label'lar */
+QLabel {
+    color: #2c3e50;
+    font-weight: 500;
+}
+
+QLabel[class="title"] {
+    font-size: 14pt;
+    font-weight: bold;
+    color: #34495e;
+    padding: 5px;
+}
+
+/* Dialog'lar */
+QDialog {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:1,
+                               stop:0 #f5f7fa, stop:1 #c3cfe2);
+}
+
+/* Mesaj Kutuları */
+QMessageBox {
+    background: white;
+    border: 2px solid #bdc3c7;
+    border-radius: 10px;
+}
+
+QMessageBox QPushButton {
+    min-width: 80px;
+    min-height: 25px;
+}
+
+/* Tool Tip */
+QToolTip {
+    background: #34495e;
+    color: white;
+    border: 1px solid #2c3e50;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 9pt;
+}
+
+/* Özel Durumlar */
+QWidget#loginGroupBox {
+    background: rgba(255, 255, 255, 0.95);
+    border: 3px solid #27ae60;
+}
+
+QWidget#adminGroupBox {
+    background: rgba(255, 255, 255, 0.95);
+    border: 3px solid #3498db;
+}
+
+QWidget#teacherGroupBox {
+    background: rgba(255, 255, 255, 0.95);
+    border: 3px solid #f39c12;
+}
+
+/* Animasyonlar için hazırlık */
+QPushButton {
+    transition: all 0.2s ease-in-out;
+}
+
+QLineEdit {
+    transition: border-color 0.2s ease-in-out;
+}
+
+QComboBox {
+    transition: border-color 0.2s ease-in-out;
+} 

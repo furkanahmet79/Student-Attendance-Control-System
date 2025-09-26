@@ -1,0 +1,15 @@
+{
+  "name": "yoklama-sistemi",
+  "version": "1.0.0",
+  "description": "Öğrenci Yoklama Sistemi",
+  "main": "index.js",
+  "scripts": {
+    "create-db": "node create_db_nodejs.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "mongodb": "^5.7.0"
+  },
+  "author": "",
+  "license": "ISC"
+} 

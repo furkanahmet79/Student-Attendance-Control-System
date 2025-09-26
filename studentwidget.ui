@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>StudentWidget</class>
+ <widget class="QWidget" name="StudentWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>600</width>
+    <height>400</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Öğrenci Paneli</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QPushButton" name="logoutButton">
+     <property name="text">
+      <string>Çıkış Yap</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton { background: #e74c3c; color: white; border: none; padding: 8px 16px; border-radius: 8px; font-weight: bold; }</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="labelTitle">
+     <property name="text">
+      <string>Yoklama Geçmişim</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font-size: 18pt; font-weight: bold; color: #229954;</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_course">
+     <item>
+      <widget class="QLabel" name="labelCourse">
+       <property name="text">
+        <string>Ders Seç:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="courseComboBox"/>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QTableWidget" name="attendanceTable">
+     <property name="columnCount">
+      <number>4</number>
+     </property>
+     <property name="horizontalHeaderLabels">
+      <stringlist>
+       <string>Ders</string>
+       <string>Tarih</string>
+       <string>Durum</string>
+       <string>Saat</string>
+      </stringlist>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui> 

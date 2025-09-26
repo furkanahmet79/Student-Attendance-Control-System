@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AdminWidget</class>
+ <widget class="QWidget" name="AdminWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1200</width>
+    <height>800</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Admin Paneli</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:1,
+                               stop:0 #f5f7fa, stop:1 #c3cfe2);
+}</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QGroupBox" name="adminGroupBox">
+     <property name="styleSheet">
+      <string notr="true">QGroupBox {
+    background: rgba(255, 255, 255, 0.95);
+    border: 3px solid #3498db;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding-top: 10px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    left: 10px;
+    padding: 0 8px 0 8px;
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                               stop:0 #3498db, stop:1 #2980b9);
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+}</string>
+     </property>
+     <property name="title">
+      <string>Admin Paneli</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="0">
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QLabel" name="welcomeLabel">
+          <property name="styleSheet">
+           <string notr="true">QLabel {
+    font-size: 14pt;
+    font-weight: bold;
+    color: #2c3e50;
+    padding: 10px;
+}</string>
+          </property>
+          <property name="text">
+           <string>Hoşgeldiniz, Admin</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Orientation::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QPushButton" name="logoutButton">
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                               stop:0 #e74c3c, stop:1 #c0392b);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    padding: 8px 16px;
+    font-weight: bold;
+    font-size: 10pt;
+    min-height: 20px;
+}
+
+QPushButton:hover {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                               stop:0 #ec7063, stop:1 #e74c3c);
+}</string>
+          </property>
+          <property name="text">
+           <string>Çıkış Yap</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="1" column="0">
+       <widget class="QTabWidget" name="tabWidget">
+        <property name="styleSheet">
+         <string notr="true">QTabWidget::pane {
+    border: 2px solid #bdc3c7;
+    border-radius: 8px;
+    background: white;
+}
+
+QTabBar::tab {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                               stop:0 #ecf0f1, stop:1 #bdc3c7);
+    border: 1px solid #bdc3c7;
+    border-bottom: none;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    padding: 12px 50px;
+    margin-right: 2px;
+    font-weight: bold;
+    color: #2c3e50;
+    min-width: 180px;
+}
+
+QTabBar::tab:selected {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                               stop:0 #3498db, stop:1 #2980b9);
+    color: white;
+}
+
+QTabBar::tab:hover:!selected {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                               stop:0 #5dade2, stop:1 #3498db);
+    color: white;
+}</string>
+        </property>
+        <widget class="QWidget" name="attendanceTab">
+         <attribute name="title">
+          <string>Yoklama Yönetimi</string>
+         </attribute>
+         <layout class="QVBoxLayout" name="attendanceLayout">
+          <item>
+           <widget class="QTableWidget" name="attendanceTable">
+            <property name="styleSheet">
+             <string notr="true">QTableWidget {
+    background: white;
+    alternate-background-color: #f8f9fa;
+    border: 2px solid #bdc3c7;
+    border-radius: 8px;
+    gridline-color: #ecf0f1;
+    selection-background-color: #3498db;
+    selection-color: white;
+    font-size: 9pt;
+}
+
+QTableWidget::item {
+    padding: 8px;
+    border-bottom: 1px solid #ecf0f1;
+}
+
+QTableWidget::item:selected {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                               stop:0 #3498db, stop:1 #2980b9);
+    color: white;
+}
+
+QTableWidget::item:hover {
+    background: #e8f4fd;
+}
+
+QHeaderView::section {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                               stop:0 #34495e, stop:1 #2c3e50);
+    color: white;
+    padding: 10px;
+    border: none;
+    font-weight: bold;
+    font-size: 9pt;
+}</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="deleteRequestsTab">
+         <attribute name="title">
+          <string>Silme İstekleri</string>
+         </attribute>
+         <layout class="QVBoxLayout" name="deleteRequestsLayout">
+          <item>
+           <widget class="QTableWidget" name="deleteRequestsTable">
+            <property name="styleSheet">
+             <string notr="true">QTableWidget {
+    background: white;
+    alternate-background-color: #f8f9fa;
+    border: 2px solid #bdc3c7;
+    border-radius: 8px;
+    gridline-color: #ecf0f1;
+    selection-background-color: #3498db;
+    selection-color: white;
+    font-size: 9pt;
+}</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="teacherManagementTab">
+         <attribute name="title">
+          <string>Öğretmen Yönetimi</string>
+         </attribute>
+         <layout class="QVBoxLayout" name="teacherManagementLayout">
+          <item>
+           <widget class="QGroupBox" name="addTeacherGroup">
+            <property name="title">
+             <string>Yeni Öğretmen Ekle</string>
+            </property>
+            <layout class="QGridLayout" name="addTeacherGrid">
+             <item row="0" column="0">
+              <widget class="QLabel" name="teacherUsernameLabel">
+               <property name="text">
+                <string>Kullanıcı Adı:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <widget class="QLineEdit" name="teacherUsernameEdit">
+               <property name="styleSheet">
+                <string notr="true">QLineEdit {
+    background: white;
+    border: 2px solid #bdc3c7;
+    border-radius: 6px;
+    padding: 8px;
+    font-size: 10pt;
+}</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="2">
+              <widget class="QLabel" name="teacherPasswordLabel">
+               <property name="text">
+                <string>Şifre:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="3">
+              <widget class="QLineEdit" name="teacherPasswordEdit">
+               <property name="styleSheet">
+                <string notr="true">QLineEdit {
+    background: white;
+    border: 2px solid #bdc3c7;
+    border-radius: 6px;
+    padding: 8px;
+    font-size: 10pt;
+    font-family: 'Courier New', monospace;
+}</string>
+               </property>
+               <property name="echoMode">
+                <enum>QLineEdit::EchoMode::Password</enum>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="0">
+              <widget class="QLabel" name="teacherFullNameLabel">
+               <property name="text">
+                <string>Ad Soyad:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="1">
+              <widget class="QLineEdit" name="teacherFullNameEdit">
+               <property name="styleSheet">
+                <string notr="true">QLineEdit {
+    background: white;
+    border: 2px solid #bdc3c7;
+    border-radius: 6px;
+    padding: 8px;
+    font-size: 10pt;
+}</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="2">
+              <widget class="QLabel" name="teacherEmailLabel">
+               <property name="text">
+                <string>E-posta:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="3">
+              <widget class="QLineEdit" name="teacherEmailEdit">
+               <property name="styleSheet">
+                <string notr="true">QLineEdit {
+    background: white;
+    border: 2px solid #bdc3c7;
+    border-radius: 6px;
+    padding: 8px;
+    font-size: 10pt;
+}</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="0" colspan="4">
+              <widget class="QPushButton" name="addTeacherButton">
+               <property name="styleSheet">
+                <string notr="true">QPushButton {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                               stop:0 #27ae60, stop:1 #229954);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    padding: 8px 16px;
+    font-weight: bold;
+    font-size: 10pt;
+    min-height: 20px;
+}
+
+QPushButton:hover {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                               stop:0 #2ecc71, stop:1 #27ae60);
+}</string>
+               </property>
+               <property name="text">
+                <string>Öğretmen Ekle</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QTableWidget" name="teachersTable">
+            <property name="contextMenuPolicy">
+             <enum>Qt::ContextMenuPolicy::CustomContextMenu</enum>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QTableWidget {
+    background: white;
+    alternate-background-color: #f8f9fa;
+    border: 2px solid #bdc3c7;
+    border-radius: 8px;
+    gridline-color: #ecf0f1;
+    selection-background-color: #3498db;
+    selection-color: white;
+    font-size: 9pt;
+}</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="courseManagementTab">
+         <attribute name="title">
+          <string>Ders Yönetimi</string>
+         </attribute>
+         <layout class="QVBoxLayout" name="courseManagementLayout">
+          <item>
+           <widget class="QGroupBox" name="addCourseGroup">
+            <property name="title">
+             <string>Yeni Ders Ekle</string>
+            </property>
+            <layout class="QGridLayout" name="addCourseGrid">
+             <item row="0" column="0">
+              <widget class="QLabel" name="courseNameLabel">
+               <property name="text">
+                <string>Ders Adı:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <widget class="QLineEdit" name="courseNameEdit">
+               <property name="styleSheet">
+                <string notr="true">QLineEdit {
+    background: white;
+    border: 2px solid #bdc3c7;
+    border-radius: 6px;
+    padding: 8px;
+    font-size: 10pt;
+}</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="2">
+              <widget class="QLabel" name="courseCodeLabel">
+               <property name="text">
+                <string>Ders Kodu:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="3">
+              <widget class="QLineEdit" name="courseCodeEdit">
+               <property name="styleSheet">
+                <string notr="true">QLineEdit {
+    background: white;
+    border: 2px solid #bdc3c7;
+    border-radius: 6px;
+    padding: 8px;
+    font-size: 10pt;
+}</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="0">
+              <widget class="QLabel" name="courseTeacherLabel">
+               <property name="text">
+                <string>Öğretmen:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="1">
+              <widget class="QComboBox" name="courseTeacherCombo">
+               <property name="styleSheet">
+                <string notr="true">QComboBox {
+    background: white;
+    border: 2px solid #bdc3c7;
+    border-radius: 6px;
+    padding: 8px;
+    font-size: 10pt;
+    min-height: 20px;
+}</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="2" colspan="2">
+              <widget class="QPushButton" name="addCourseButton">
+               <property name="styleSheet">
+                <string notr="true">QPushButton {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                               stop:0 #27ae60, stop:1 #229954);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    padding: 8px 16px;
+    font-weight: bold;
+    font-size: 10pt;
+    min-height: 20px;
+}
+
+QPushButton:hover {
+    background: qlineargradient(x1:0, y1:0, x2:0, y2:1,
+                               stop:0 #2ecc71, stop:1 #27ae60);
+}</string>
+               </property>
+               <property name="text">
+                <string>Ders Ekle</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QTableWidget" name="coursesTable">
+            <property name="styleSheet">
+             <string notr="true">QTableWidget {
+    background: white;
+    alternate-background-color: #f8f9fa;
+    border: 2px solid #bdc3c7;
+    border-radius: 8px;
+    gridline-color: #ecf0f1;
+    selection-background-color: #3498db;
+    selection-color: white;
+    font-size: 9pt;
+}</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
